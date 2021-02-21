@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="23216" started-at="2021-02-20T18:55:09Z" finished-at="2021-02-20T18:55:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="23216" started-at="2021-02-20T18:55:09Z" finished-at="2021-02-20T18:55:32Z">
+      <class name="Tests.SignUpTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Tests.SignUpTest@64bfbc86]" name="beforeClass" is-config="true" duration-ms="8484" started-at="2021-02-20T20:55:09Z" finished-at="2021-02-20T20:55:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="signUpTestPositive()[pri:0, instance:Tests.SignUpTest@64bfbc86]" name="signUpTestPositive" duration-ms="13957" started-at="2021-02-20T20:55:18Z" finished-at="2021-02-20T20:55:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpTestPositive -->
+        <test-method status="PASS" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:Tests.SignUpTest@64bfbc86]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2021-02-20T20:55:32Z" finished-at="2021-02-20T20:55:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=signUpTestPositive status=SUCCESS method=SignUpTest.signUpTestPositive()[pri:0, instance:Tests.SignUpTest@64bfbc86] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:Tests.SignUpTest@64bfbc86]" name="afterClass" is-config="true" duration-ms="741" started-at="2021-02-20T20:55:32Z" finished-at="2021-02-20T20:55:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Tests.SignUpTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
