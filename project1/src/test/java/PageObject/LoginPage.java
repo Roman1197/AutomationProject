@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
-
+	private WebDriver driver;
 	@FindBy(id = "email")
 	private WebElement logInEmailField;
 
@@ -33,6 +33,10 @@ public class LoginPage extends BasePage {
 
 	public WebElement getForgotPasswordLink() {
 		return forgotPasswordLink;
+	}
+
+	public WebDriver getDriver() {
+		return driver;
 	}
 
 	public WebElement getSignInButton() {

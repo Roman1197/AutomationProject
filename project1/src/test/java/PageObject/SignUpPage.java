@@ -1,5 +1,7 @@
 package PageObject;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -87,7 +89,7 @@ public class SignUpPage extends BasePage {
 	@FindBy(name = "submitAccount")
 	private WebElement register_btn;
 
-	@FindBy(xpath = "//a[@title=\"View my customer account\"]")
+	@FindBy(css = "#center_column h1")
 	private WebElement signedInUserName;
 
 	public SignUpPage(WebDriver driver) {
@@ -167,8 +169,8 @@ public class SignUpPage extends BasePage {
 		return address1_Field;
 	}
 
-	public WebElement getSignedInUserName() {
-		return signedInUserName;
+	public String getSignedInUserName() {
+		return signedInUserName.getText();
 	}
 
 	public WebElement getAddress2_Field() {
@@ -179,8 +181,12 @@ public class SignUpPage extends BasePage {
 		return city_Field;
 	}
 
-	public WebElement getState_list() {
-		return state_list;
+	public void getState_list(int stateNum) throws InterruptedException {
+		state_list.click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//select[@name=\"id_state\"]/option[5]")).click();
+		;
+
 	}
 
 	public WebElement getZipCode_Field() {

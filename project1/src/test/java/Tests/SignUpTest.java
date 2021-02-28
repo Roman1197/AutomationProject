@@ -9,6 +9,8 @@ import PageObject.SignUpPage;
 public class SignUpTest extends BaseTest {
 	@Test
 	public void signUpTestPositive() throws InterruptedException {
+
+		extentTest = extent.createTest("signUpTestPositive");
 		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
 
 		SignUpPage signUpPage = new SignUpPage(driver);
@@ -46,7 +48,11 @@ public class SignUpTest extends BaseTest {
 
 		signUpPage.getAddress2_Field().sendKeys("rammllla");
 
-		// signUpPage.getState_list();
+		signUpPage.getCity_Field().sendKeys("ramal");
+
+		// signUpPage.getState_list(2);
+
+		signUpPage.getZipCode_Field().sendKeys("12345");
 
 		signUpPage.getAdditional_Info_Field().sendKeys("send something");
 
@@ -57,8 +63,9 @@ public class SignUpTest extends BaseTest {
 		signUpPage.getAlias_Field().sendKeys("123");
 
 		signUpPage.getRegister_btn().click();
-		assertEquals(signUpPage.getSignedInUserName().getAttribute("text"), "roman katanov");
-		
+
+		System.out.println(signUpPage.getSignedInUserName());
+		assertEquals(signUpPage.getSignedInUserName(), "roman katanov");
 
 	}
 }

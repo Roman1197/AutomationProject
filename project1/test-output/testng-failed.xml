@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="myTest1.NewTest">
+      <class name="Tests.SmokeTest">
         <methods>
+          <include name="smokeTest"/>
+          <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="signUp"/>
           <include name="AfterMethod"/>
         </methods>
-      </class> <!-- myTest1.NewTest -->
+      </class> <!-- Tests.SmokeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
