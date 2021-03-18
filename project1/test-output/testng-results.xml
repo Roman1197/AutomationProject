@@ -1,64 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21272" started-at="2021-02-28T18:30:52Z" finished-at="2021-02-28T18:31:14Z">
+  <suite name="Parameterization Test Suite" duration-ms="4761" started-at="2021-03-18T17:10:38Z" finished-at="2021-03-18T17:10:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21272" started-at="2021-02-28T18:30:52Z" finished-at="2021-02-28T18:31:14Z">
+    <test name="Testing Parameterization" duration-ms="4761" started-at="2021-03-18T17:10:38Z" finished-at="2021-03-18T17:10:42Z">
       <class name="Tests.SmokeTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Tests.SmokeTest@7e0b0338]" name="beforeClass" is-config="true" duration-ms="8909" started-at="2021-02-28T20:30:52Z" finished-at="2021-02-28T20:31:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="smokeTest()[pri:0, instance:Tests.SmokeTest@7e0b0338]" name="smokeTest" duration-ms="11131" started-at="2021-02-28T20:31:01Z" finished-at="2021-02-28T20:31:12Z">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+        <test-method status="FAIL" signature="beforeClass(java.lang.String)[pri:0, instance:Tests.SmokeTest@31610302]" name="beforeClass" is-config="true" duration-ms="0" started-at="2021-03-18T19:10:38Z" finished-at="2021-03-18T19:10:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=88.0.4324.190)
+              <![CDATA[Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: WIN10
 Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
 System info: host: 'LAPTOP-MHDHOLS5', ip: '169.254.248.244', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.190, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\angel\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51330}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 465a98dd7ae9ae4ae581a5b9b14e38e1]]>
+Driver info: driver.version: FirefoxDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=88.0.4324.190)
+              <![CDATA[org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: WIN10
 Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
 System info: host: 'LAPTOP-MHDHOLS5', ip: '169.254.248.244', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.190, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\angel\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51330}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 465a98dd7ae9ae4ae581a5b9b14e38e1
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:238)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at Tests.SmokeTest.smokeTest(SmokeTest.java:18)
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.FirefoxBinary.<init>(FirefoxBinary.java:95)
+	at java.util.Optional.orElseGet(Unknown Source)
+	at org.openqa.selenium.firefox.FirefoxOptions.getBinary(FirefoxOptions.java:199)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.withOptions(GeckoDriverService.java:180)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:207)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:177)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:155)
+	at Tests.BaseTest.beforeClass(BaseTest.java:116)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:552)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
 	at org.testng.TestRunner.privateRun(TestRunner.java:767)
 	at org.testng.TestRunner.run(TestRunner.java:617)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
@@ -75,26 +61,23 @@ Session ID: 465a98dd7ae9ae4ae581a5b9b14e38e1
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="smokeTest()[pri:0, instance:Tests.SmokeTest@31610302]" name="smokeTest" duration-ms="1" started-at="2021-03-18T19:10:42Z" finished-at="2021-03-18T19:10:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- smokeTest -->
-        <test-method status="PASS" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:Tests.SmokeTest@7e0b0338]" name="AfterMethod" is-config="true" duration-ms="533" started-at="2021-02-28T20:31:12Z" finished-at="2021-02-28T20:31:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=smokeTest status=FAILURE method=SmokeTest.smokeTest()[pri:0, instance:Tests.SmokeTest@7e0b0338] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:Tests.SmokeTest@31610302]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2021-03-18T19:10:42Z" finished-at="2021-03-18T19:10:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:Tests.SmokeTest@7e0b0338]" name="afterClass" is-config="true" duration-ms="664" started-at="2021-02-28T20:31:13Z" finished-at="2021-02-28T20:31:14Z">
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:Tests.SmokeTest@31610302]" name="afterClass" is-config="true" duration-ms="0" started-at="2021-03-18T19:10:42Z" finished-at="2021-03-18T19:10:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- Tests.SmokeTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Testing Parameterization -->
+  </suite> <!-- Parameterization Test Suite -->
 </testng-results>

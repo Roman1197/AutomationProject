@@ -12,10 +12,13 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -42,7 +45,7 @@ public class BaseTest {
 	@AfterClass
 	public void afterClass() {
 		extent.flush();
-	//	driver.quit();
+		// driver.quit();
 
 	}
 
@@ -100,10 +103,24 @@ public class BaseTest {
 	}
 
 	@BeforeClass
-	public void beforeClass() {
+	@Parameters("browser")
+	public void beforeClass(String browser) {
+		if (browser.equalsIgnoreCase("chrome")) {
 
-		WebDriverManager.chromedriver().browserVersion("87.0.4280.141").setup();
-		driver = new ChromeDriver();
+			WebDriverManager.chromedriver().browserVersion("87.0.4280.141").setup();
+			driver = new ChromeDriver();
+
+		} else if (browser.equalsIgnoreCase("firefox")) {
+
+			WebDriverManager.firefoxdriver().browserVersion("86.0.1").setup();
+			driver = new FirefoxDriver();
+
+		} else if (browser.equalsIgnoreCase("edge")) {
+
+			WebDriverManager.edgedriver().browserVersion("89.0.774.48").setup();
+			driver = new EdgeDriver();
+
+		}
 
 		driver.manage().window().maximize();
 
